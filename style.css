@@ -1,0 +1,124 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "nav content";
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-top: 10px;
+}
+
+p, ul {
+    margin: 0px;
+}
+
+code {
+    color: grey;
+}
+
+#main-doc {
+    grid-area: content;
+}
+
+.main-section {
+    padding: 10px 0 10px 270px;
+}
+
+.main-section header {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main-section:nth-child(even) {
+    background-color: lightgrey;
+}
+
+#nav-bar {
+    background-color: grey;
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#nav-bar header {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+#nav-bar a {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+.dropdown {
+    display: none;
+}
+
+@media (max-width:414px) {
+    body {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        grid-template-areas: "drop" "content";
+    }
+    #nav-bar {
+        /* position: relative;
+        height: 200px;
+        width: 100%;
+        overflow-x: hidden; */
+        display: none;
+    }
+    .dropdown {
+        display: inline;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: grey;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .show {display: block;}
+
+      .dropbtn {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+      }
+
+    .main-section {
+        padding: 10px 10px 10px 10px;
+    }
+}
