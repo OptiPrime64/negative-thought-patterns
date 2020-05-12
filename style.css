@@ -90,7 +90,7 @@ code {
     }
     .dropdown-content {
         display: none;
-        position: absolute;
+        position: fixed;
         background-color: grey;
         min-width: 160px;
         overflow: auto;
@@ -107,6 +107,7 @@ code {
       .show {display: block;}
 
       .dropbtn {
+          position: fixed;
         font-family: 'Times New Roman', Times, serif;
         background-color: black;
         color: white;
@@ -119,6 +120,6 @@ code {
       }
 
     .main-section {
-        padding: 10px 10px 10px 10px;
+        padding: 50px 10px 10px 10px;
     }
 }
